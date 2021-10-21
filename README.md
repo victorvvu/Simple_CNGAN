@@ -1,4 +1,4 @@
-# Ventilator Pressure Inference 
+# GAN Dog Net
 
 This dataset was taken from a paper from Khosla, and contains 20,000 images of dogs, with 120 different breeds!  
 
