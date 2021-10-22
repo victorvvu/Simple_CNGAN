@@ -26,9 +26,9 @@ Sample from dataset
 ![Sample2](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/dog_imgs/n02100236_2204.jpg?raw=true)
 
 
-20,000 images of dogs
-120 breeds
-Labels include but not needed for this project
+- 20,000 images of dogs
+- 120 breeds
+- labels include but not needed for this project
 
   
 ## 4. To Do List
