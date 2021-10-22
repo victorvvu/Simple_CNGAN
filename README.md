@@ -2,11 +2,16 @@
 
 This dataset was taken from a paper from Khosla, and contains 20,000 images of dogs, with 120 different breeds!  
 
-## 1. Summary 
-Here we take a fairly small dataset to train a convolutional neural GAN.  
 
+## 1. Summary 
+GANs are fairly new deep learning architectures and have many uses. They have many applications such as:
+- create synthetic data for ML algorithms
+- generate new images, art or even mimic styles
+- create images of dogs
+
+![Alt text](C:\Users\victo\Desktop\kaggle\dog\all-dogs\dog_imgs/n02085782_2796.jpg?raw=true "Title")
 ##### Technical Overview
-The pitfall of GANs are that they require massive amounts of compute power to train, meaning they need stacks of GPUs to train. GANs are essentially 2 neural networks, in this case CNNs (convolutional neural networks), competing against each other. Currently the model was trained locally with a fairly weak GPU so only 64 X 64 iamges were created with a simple architecture.
+The pitfall of GANs are that they require massive amounts of compute power to train, meaning they need stacks of GPUs to train. GANs are essentially 2 neural networks, in this case CNNs (convolutional neural networks), competing against each other. The model was trained locally with a fairly weak GPU (NVIDA GTX 1050 Ti) so only 64 X 64 iamges were created with a simple architecture.
 
 Another repo will be made when the Style2GAN dog model is created.
 
