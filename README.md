@@ -1,5 +1,4 @@
 # GAN Dog Net
-![Yeti](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/dog_imgs/yeti.jpg?raw=true)
 This dataset was taken from a paper from Khosla, and contains 20,000 images of dogs, with 120 different breeds!  
 
 
@@ -20,7 +19,9 @@ Another repo will be made when the Style2GAN dog model is created.
 
   
 ## 3. Data Description
+![Sample]https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/dog_imgs/n02085782_17.jpg?raw=true
 
+![Sample2]https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/dog_imgs/n02100236_2204.jpg?raw=true
 20,000 images of dogs
 120 breeds
 Labels include but not needed for this project
