@@ -3,7 +3,7 @@
 This dataset was taken from a paper from Khosla, and contains 20,000 images of dogs, with 120 different breeds!  
 
 ## 1. Summary 
-GANs are 
+Here we take a fairly small dataset to train a convolutional neural GAN.  
 
 ##### Technical Overview
 The pitfall of GANs are that they require massive amounts of compute power to train, meaning they need stacks of GPUs to train. GANs are essentially 2 neural networks, in this case 2 CNNs (convolutional neural network), competing against each other. I opted to use Google Cloud to train my network rather than AWS, since I would rather not pay to train a NN.
@@ -19,7 +19,11 @@ The pitfall of GANs are that they require massive amounts of compute power to tr
 Labels include but not needed for this project
 
   
-## 4. Libraries
+## 4. To Do List
+-[x] Make a simple GAN architecture and produce suspect looking dogs
+- [x] Request free P2 instances from AWS 
+- [ ] Use instance to train a StyleGAN2 on dataset to produce quality dogs
+- [ ] Tenative on results 
 
 
 ## 5. References
