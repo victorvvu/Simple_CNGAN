@@ -20,7 +20,6 @@ Another repo will be made when the Style2GAN dog model is created.
   
 ## 3. Data Description
 Sample from dataset
-![Sample1](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/dog_imgs/n02085782_17.jpg?raw=true)
 ![Sample2](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/dog_imgs/n02100236_2204.jpg?raw=true)
 
 
