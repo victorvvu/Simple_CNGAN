@@ -18,8 +18,7 @@ Another repo will be made when the Style2GAN dog model is created.
 ## 2. Results
 I did not perform any data augmentations because creating a good CNGANs model would be impossible with this setup (weak GPU and small dataset). Regardless, this was an interesting, informative exercise. I trained the models for approximately ~75 epochs. It starts off as a random blobs and slowly turns into grouped blobs with some structure.
 
-
-- fill
+![DCGAN](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/Generator_Results/dcgan.gif?raw=true)
 
   
 ## 3. Data Description
