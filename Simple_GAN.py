@@ -3,29 +3,37 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tqdm import tqdm
 
-physical_devices = tf.config.list_physical_devices("GPU")
+#Utilize GPU
+physical_devices = tf.config.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
-#file_path = r'C:\Users\victo\Desktop\kaggle\dog\all-dogs'
+
+
+##Need to set own file_path of dataset
+#can be downloaded from Kaggle or from Stanford respository in readme
+file_path = #your file path of data
+
+
+
 dataset = keras.preprocessing.image_dataset_from_directory(
     directory="all-dogs", label_mode=None, image_size=(64, 64), batch_size=32
 )
 dataset = dataset.map(lambda x: x / 255.0)
 
-
+### Increase epochs for better training
 epochs= 100
 
 discriminator = keras.Sequential(
     [
         keras.Input(shape=(64,64,3)),
-        layers.Conv2D(64, kernel_size=4, strides=2, padding="same"),
+        layers.Conv2D(64, kernel_size=4, strides=2, padding='same'),
         layers.LeakyReLU(0.2),
-        layers.Conv2D(128, kernel_size=4, strides=2, padding="same"),
+        layers.Conv2D(128, kernel_size=4, strides=2, padding='same'),
         layers.LeakyReLU(0.2),
-        layers.Conv2D(128, kernel_size=4, strides=2, padding="same"),
+        layers.Conv2D(128, kernel_size=4, strides=2, padding='same'),
         layers.LeakyReLU(0.2),
         layers.Flatten(),
         layers.Dropout(0.2),
-        layers.Dense(1, activation="sigmoid"),
+        layers.Dense(1, activation='sigmoid'),
     ]
 )
 
@@ -37,13 +45,13 @@ generator = keras.Sequential(
         layers.Input(shape=(latent_dim,)),
         layers.Dense(8*8*128),
         layers.Reshape((8, 8, 128)),
-        layers.Conv2DTranspose(128, kernel_size=4, strides=2, padding="same"),
+        layers.Conv2DTranspose(128, kernel_size=4, strides=2, padding='same'),
         layers.LeakyReLU(0.2),
-        layers.Conv2DTranspose(256, kernel_size=4, strides=2, padding="same"),
+        layers.Conv2DTranspose(256, kernel_size=4, strides=2, padding='same'),
         layers.LeakyReLU(0.2),
-        layers.Conv2DTranspose(512, kernel_size=4, strides=2, padding="same"),
+        layers.Conv2DTranspose(512, kernel_size=4, strides=2, padding='same'),
         layers.LeakyReLU(0.2),
-        layers.Conv2D(3, kernel_size=5, padding="same", activation="sigmoid"),
+        layers.Conv2D(3, kernel_size=5, padding="same", activation='sigmoid'),
     ]
 )
 generator.summary()
@@ -59,11 +67,12 @@ for epoch in range(epochs):
         random_latent_vectors = tf.random.normal(shape=(batch_size, latent_dim))
         fake = generator(random_latent_vectors)
 
+        #if you want to save an img at each epoch
+'''
         if idx % 100 == 0:
             img = keras.preprocessing.image.array_to_img(fake[0])
             img.save(f"generated_images/generated_img{epoch}_{idx}_.png")
-
-        ### Train Discriminator: max log(D(x)) + log(1 - D(G(z))
+'''
         with tf.GradientTape() as disc_tape:
             loss_disc_real = loss_fn(tf.ones((batch_size, 1)), discriminator(real))
             loss_disc_fake = loss_fn(tf.zeros(batch_size, 1), discriminator(fake))
@@ -74,7 +83,6 @@ for epoch in range(epochs):
             zip(grads, discriminator.trainable_weights)
         )
 
-        ### Train Generator min log(1 - D(G(z)) <-> max log(D(G(z))
         with tf.GradientTape() as gen_tape:
             fake = generator(random_latent_vectors)
             output = discriminator(fake)
