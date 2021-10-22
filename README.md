@@ -1,5 +1,5 @@
 # GAN Dog Net
-
+![Yeti](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/dog_imgs/yeti.jpg?raw=true)
 This dataset was taken from a paper from Khosla, and contains 20,000 images of dogs, with 120 different breeds!  
 
 
@@ -9,7 +9,6 @@ GANs are fairly new deep learning architectures and have many uses. They have ma
 - generate new images, art or even mimic styles
 - create images of dogs
 
-![Alt text](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/dog_imgs/n02100236_2204.jpg?raw=true)
 ##### Technical Overview
 The pitfall of GANs are that they require massive amounts of compute power to train, meaning they need stacks of GPUs to train. GANs are essentially 2 neural networks, in this case CNNs (convolutional neural networks), competing against each other. The model was trained locally with a fairly weak GPU (NVIDA GTX 1050 Ti) so only 64 X 64 iamges were created with a simple architecture.
 
