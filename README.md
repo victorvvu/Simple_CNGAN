@@ -20,13 +20,16 @@ I did not perform any data augmentations because creating a good CNGANs model wo
 
 
 Half way through training
+
 ![40th](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/Generator_Results/generated_img40_600_.png?raw=true)
 
 Last training epoch
+
 ![Last EPOCH](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/Generator_Results/generated_img76_0_.png?raw=true)
 
 
 Here is a GIF (of the generator training)
+
 ![DCGAN](https://github.com/victorvvu/Simple_CNGAN_Dogs/blob/main/Generator_Results/dcgan.gif?raw=true)
 
   
