@@ -8,7 +8,7 @@ GANs are fairly new deep learning architectures and have many use cases. These a
 - generate new images, art or even mimic styles
 - create images of dogs
 
-Here we train a Simple CNGAN from scratch, meaning this will probably produce very **poor images of dogs**. However, this is more of an exercise to see how GANs learn in an unsupervised fashion. 
+Here we train a simple CNGAN from scratch, meaning this will probably produce very **poor images of dogs**. However, this is more of an exercise to see how GANs learn in an unsupervised fashion. 
 
 ##### Technical Overview
 The pitfall of GANs are that they require massive amounts of compute power to train, meaning they need stacks of GPUs to train. GANs are essentially 2 neural networks, in this case CNNs (convolutional neural networks), competing against each other. The models were trained locally with a fairly weak GPU (NVIDA GTX 1050 Ti) so only 64 X 64 images were created with a simple architecture.
@@ -16,6 +16,8 @@ The pitfall of GANs are that they require massive amounts of compute power to tr
 Another repo will be made when the Style2GAN dog model is created.
 
 ## 2. Results
+I did not perform any data augmentations because creating a good CNGANs model would be impossible with this setup (weak GPU and small dataset). Regardless, this was an interesting, informative exercise. I trained the models for approximately ~75 epochs. It starts off as a random blobs and slowly turns into grouped blobs with some structure.
+
 
 - fill
 
