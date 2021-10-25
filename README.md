@@ -56,7 +56,7 @@ Sample from dataset
 ## 4. To Do List
 - [x] Make a simple GAN architecture and produce suspect looking dogs
 - [ ] Train using a StyleGAN2 on dataset to produce quality dog photos
-- [ ] Tenative on results 
+- [ ] Explore other GANs
 
 
 ## 5. References
